@@ -6,7 +6,7 @@
     <title>Connexion</title>
   </head>
   <body>
-    <p>Test2</p>
+    <p>Test</p>
     <script>
       var DEVELOPER_KEY = "AIzaSyCRv7YN1ir8poSE4YPhEF4EHXXP81TylPQ";
       var clientId =
@@ -40,7 +40,7 @@
       function handleAuthResult(authResult) {
         if (authResult && !authResult.error) {
           oauthToken = authResult.access_token;
-          window.opener.postMessage(oathToken, '*');
+          window.opener.postMessage(oauthToken, '*');
         //   createPicker();
         }
       }
