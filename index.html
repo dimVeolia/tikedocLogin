@@ -32,14 +32,14 @@
       }
 
       function onPickerApiLoad() {
-        pickerApiLoaded = true;
-        createPicker();
+        // pickerApiLoaded = true;
+        // createPicker();
       }
 
       function handleAuthResult(authResult) {
         if (authResult && !authResult.error) {
           const oauthToken = authResult.access_token;
-          window.opener.postMessage(oathToken, '*')
+          window.opener.postMessage(oathToken, '*');
         //   createPicker();
         }
       }
