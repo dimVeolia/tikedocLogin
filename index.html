@@ -6,13 +6,18 @@
     <title>Connexion</title>
   </head>
   <body>
-    <p>Test5</p>
+    <p>Test6</p>
     <script>
       var DEVELOPER_KEY = "AIzaSyCRv7YN1ir8poSE4YPhEF4EHXXP81TylPQ";
       var clientId =
         "693075473121-hvag2o7vtvkd6ig8qujcpt7n9h14fsv2.apps.googleusercontent.com";
       var appId = "693075473121";
-      var scope = ["https://www.googleapis.com/auth/drive.file"];
+      var scope = [
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive",
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/script.container.ui"
+    ];
       let oauthToken;
 
       // Use the Google API Loader script to load the google.picker script.
