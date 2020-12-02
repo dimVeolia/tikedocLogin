@@ -6,18 +6,19 @@
     <title>Connexion</title>
   </head>
   <body>
-    <p>Test</p>
+    <p>Test2</p>
     <script>
       var DEVELOPER_KEY = "AIzaSyCRv7YN1ir8poSE4YPhEF4EHXXP81TylPQ";
       var clientId =
         "693075473121-hvag2o7vtvkd6ig8qujcpt7n9h14fsv2.apps.googleusercontent.com";
       var appId = "693075473121";
       var scope = ["https://www.googleapis.com/auth/drive.file"];
+      let oauthToken;
 
       // Use the Google API Loader script to load the google.picker script.
       function loadPicker() {
         gapi.load("auth", { callback: onAuthApiLoad });
-        gapi.load("picker", { callback: onPickerApiLoad });
+        // gapi.load("picker", { callback: onPickerApiLoad });
       }
 
       function onAuthApiLoad() {
@@ -38,7 +39,7 @@
 
       function handleAuthResult(authResult) {
         if (authResult && !authResult.error) {
-          const oauthToken = authResult.access_token;
+          oauthToken = authResult.access_token;
           window.opener.postMessage(oathToken, '*');
         //   createPicker();
         }
